@@ -9,8 +9,8 @@ from telegram.ext import (
 )
 
 # --- 在这里替换成您的链接 ---
-URL_FOR_BUTTON_1 = 'https://www.your-first-link.com'      # 第一个按钮的链接
-URL_FOR_BUTTON_2 = 'https://t.me/your_second_link_group' # 第二个按钮的链接
+URL_FOR_BUTTON_1 = 'tg://setlanguage?lang=zhcncc'      # 第一个按钮的链接
+URL_FOR_BUTTON_2 = 'tg://setlanguage?lang=zh-hant-beta' # 第二个按钮的链接
 
 # 从环境变量中获取您的机器人令牌
 BOT_TOKEN = os.environ.get('BOT_TOKEN') # 强烈建议将令牌存储为环境变量
@@ -25,8 +25,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         # 创建内联键盘按钮
         keyboard = [
             [
-                InlineKeyboardButton("官方网站", url=URL_FOR_BUTTON_1),
-                InlineKeyboardButton("官方群组", url=URL_FOR_BUTTON_2),
+                InlineKeyboardButton("简体中文", url=URL_FOR_BUTTON_1),
+                InlineKeyboardButton("繁体中文", url=URL_FOR_BUTTON_2),
             ],
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
