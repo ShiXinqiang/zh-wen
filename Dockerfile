@@ -1,5 +1,5 @@
 # 使用一个官方的、轻量级的 Python 3.9 版本作为基础
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 # 在容器（虚拟服务器）内部创建一个叫做 /app 的工作目录
 WORKDIR /app
